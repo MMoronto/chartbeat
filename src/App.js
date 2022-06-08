@@ -38,7 +38,7 @@ const App = () => {
                 </div>
                     <Routes>
                         {/*  Dashboard  */}
-                        <Route path='/' element={ <ECommerce /> } />
+                        <Route path='/' element={ <Ecommerce /> } />
                         <Route path='/ecommerce' element={ <ECommerce /> } />
 
                         {/* Pages */}
