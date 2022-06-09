@@ -13,7 +13,9 @@ const Sidebar = () => {
     <div className='ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10'>
       {activeMenu && (<>
         <div className='flex justify-between items-center'>
-          <Link to='/'></Link>
+          <Link to='/' onClick={() => {}} className='items-center'>
+            <SiShopware className='text-3x1' />
+          </Link>
         </div>
       </>)}
     </div>
