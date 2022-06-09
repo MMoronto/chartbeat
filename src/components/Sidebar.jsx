@@ -32,7 +32,13 @@ const Sidebar = () => {
                 {item.title}
               </p>
               {item.links.map((Link) => (
+                <NavLink
+                  to={`/${Link.name}`}
+                  key={Link.name}
+                  onClick={() => {}}
+                >
 
+                </NavLink>
               ))}
             </div>
           ))}
