@@ -28,7 +28,12 @@ const Sidebar = () => {
         <div className='mt-10'>
           {links.map((item) => (
             <div key={item.title}>
-              {item.title}
+              <p>
+                {item.title}
+              </p>
+              {item.links.map((Link) => (
+
+              ))}
             </div>
           ))}
         </div>
