@@ -30,7 +30,7 @@ const Sidebar = () => {
         </div>
         <div className='mt-10'>
           {links.map((item) => (
-            <div key={item.title}>
+            <div className='text-gray-400 m-3 mt-4 uppercase' key={item.title}>
               <p>
                 {item.title}
               </p>
