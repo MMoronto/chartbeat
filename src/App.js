@@ -11,6 +11,7 @@ import './App.css'
 
 const App = () => {
   const { activeMenu } = useStateContext();
+  
   return (
     <div>
         <BrowserRouter>
