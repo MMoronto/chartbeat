@@ -6,12 +6,17 @@ const initialState = {
     chat: false,
     chart: false,
     userProfile: false,
+    notification: false,
 }
 
 export const ContextProvider = ({ children }) => {
-    return <StateContext.Provider
-        value={{test: 'test'}}
-    >
-        {children}
-    </StateContext.Provider>
+    const [activeMenu, setActiveMenu] = useState (true);
+
+    return (
+        <StateContext.Provider
+            value={{test: 'test'}}
+        >
+            {children}
+        </StateContext.Provider>
+    )
 }
