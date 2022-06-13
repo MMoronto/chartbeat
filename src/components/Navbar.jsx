@@ -11,8 +11,13 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 
 const Navbar = () => {
+  const { activeMenu, setActiveMenu } =
+  useStateContext();
+
   return (
-    <div>Navbar</div>
+    <div className='flex justify-between p-2'>
+      Navbar
+    </div>
   )
 }
 
