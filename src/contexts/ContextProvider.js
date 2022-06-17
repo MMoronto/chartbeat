@@ -7,7 +7,7 @@ const initialState = {
     chart: false,
     userProfile: false,
     notification: false,
-}
+};
 
 export const ContextProvider = ({ children }) => {
     const [activeMenu, setActiveMenu] = useState (true);
@@ -21,7 +21,7 @@ export const ContextProvider = ({ children }) => {
     return (
         <StateContext.Provider
             value={{
-                activeMenu: 
+                activeMenu, 
                 setActiveMenu,
                 isClicked,
                 setIsClicked,
