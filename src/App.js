@@ -11,7 +11,7 @@ import './App.css'
 
 const App = () => {
   const { activeMenu } = useStateContext();
-  
+
   return (
     <div>
         <BrowserRouter>
@@ -34,11 +34,13 @@ const App = () => {
                 )}
                 <div className={ 
                     `dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72 w-full' : 'flex-2'}` 
-                }>
+                    }>
                    <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
                        <Navbar />
                    </div> 
-                </div>
+                {/* </div> */}
+
+                <div>
                     <Routes>
                         {/*  Dashboard  */}
                         <Route path='/' element={ <Ecommerce /> } />
@@ -66,9 +68,8 @@ const App = () => {
                         <Route path='/stacked' element={ <Stacked /> } />
 
                     </Routes>
-                <div>
-
                 </div>
+            </div>
             </div>
         </BrowserRouter>
     </div>
