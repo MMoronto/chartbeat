@@ -91,7 +91,7 @@ const Ecommerce = () => {
                       currentColor='blue' 
                       id='line-sparkline' 
                       type='Line' 
-                      height='8-px' 
+                      height='80px' 
                       width='250px' 
                       data={SparklineAreaData} 
                       color='blue' 
