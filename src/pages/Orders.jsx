@@ -11,7 +11,7 @@ const Orders = () => {
       <GridComponent>
         <ColumnsDirective>
           {ordersGrid.map((item, index) => (
-            <ColumnDirective />
+            <ColumnDirective key={index} {...item} />
           ))}
         </ColumnsDirective>
       </GridComponent>
