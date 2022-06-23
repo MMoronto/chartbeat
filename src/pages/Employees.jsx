@@ -20,7 +20,7 @@ const Employees = () => {
             <ColumnDirective key={index} {...item} />
           ))}
         </ColumnsDirective>
-        <Inject services={[ Page, Search ]} />
+        <Inject services={[ Page, Search, Toolbar ]} />
       </GridComponent>
     </div>
   )
