@@ -10,7 +10,7 @@ import { useStateContext } from './contexts/ContextProvider';
 import './App.css'
 
 const App = () => {
-  const { activeMenu, themeSettings } = useStateContext();
+  const { activeMenu, themeSettings, setThemeSettings } = useStateContext();
 
   return (
     <div>
@@ -18,13 +18,15 @@ const App = () => {
             <div className='flex relative dark:bg-main-dark-bg'>
                 <div className='fixed right-4 bottom-4' style={{ zIndex: '1000'}}>
                     <TooltipComponent content="Settings" position="Top">
-                        <button type='button' className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white' style={{background: 'blue', borderRadius: '50%' }}>
+                        <button type='button' className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white' 
+                        onClick={() => setThemeSettings(true)}
+                        style={{ background: 'blue', borderRadius: '50%' }}>
                             <FiSettings />
                         </button>
                     </TooltipComponent>
                 </div>
                 {activeMenu ? (
-                    <div className='w-72 fixwd sidebar dark:bg-secondary-dark-bg bg-white'>
+                    <div className='w-72 fixed sidebar dark:bg-secondary-dark-bg bg-white'>
                         <Sidebar />
                     </div>
                 ) : (
