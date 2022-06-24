@@ -11,7 +11,7 @@ const ThemeSettings = () => {
     <div className='bg-half-transparent w-screen fixed nav-item top-0 right-0'>
       <div className='float-right h-screen dark:text-gray-200 bg-white dark:[#484B52] w-400'>
         <div className='flex justify-between items-center p-4 ml-4'>
-          <p className='font-semibold text-lg'>Settings</p>
+          <p className='font-semibold text-xl'>Settings</p>
           <button
             type='button'
             onClick={() => {}}
@@ -23,7 +23,17 @@ const ThemeSettings = () => {
         </div>
 
         <div className='flex-col border-t-1 border-color p-4 ml-4'>
-          <p>Theme Options</p>
+          <p className='font-semibold text-lg'>Theme Options</p>
+
+          <div className='mt-4'>
+            <input
+              type='radio'
+              id='light'
+              name='theme'
+              value='Light'
+              className='cursor-pointer' 
+            />
+          </div>
         </div>
       </div>
     </div>
