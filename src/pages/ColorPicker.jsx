@@ -20,6 +20,16 @@ const ColorPicker = () => {
               showButtons={false}
             />
           </div>
+          <div>
+            <p className='text-2xl font-semibold mt-2 mb-4'>Inline Picker</p>
+            <ColorPickerComponent 
+              id='inline-pallete'
+              mode='Picker'
+              modeSwitcher={false}
+              inline 
+              showButtons={false}
+            />
+          </div>
         </div>
       </div>
     </div>
