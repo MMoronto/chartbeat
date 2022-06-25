@@ -33,8 +33,8 @@ const ThemeSettings = () => {
               name='theme'
               value='Light'
               className='cursor-pointer' 
-              onChange={() => {}}
-              checked={true}
+              onChange={setMode}
+              checked={currentMode === 'Light'}
             />
             <label htmlFor='light' className='ml-2 text-md cursor-pointer'>
               Light
@@ -47,8 +47,8 @@ const ThemeSettings = () => {
               name='theme'
               value='Dark'
               className='cursor-pointer' 
-              onChange={() => {}}
-              checked={true}
+              onChange={setMode}
+              checked={currentMode === 'Dark'}
             />
             <label htmlFor='dark' className='ml-2 text-md cursor-pointer'>
               Dark
@@ -60,7 +60,7 @@ const ThemeSettings = () => {
           <p className='font-semibold text-lg'>Theme Colors</p>
           <div className='flex gap-3'>
             {themeColors.map((item, index) => (
-              <TooltipComponent key={index} content={item.name} position='TOpCenter'>
+              <TooltipComponent key={index} content={item.name} position='TopCenter'>
                 <div className='relative mt-2 cursor-pointer flex gap-5 item-center'>
                   <button
                     type='button'
