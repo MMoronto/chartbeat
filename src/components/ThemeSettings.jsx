@@ -61,14 +61,14 @@ const ThemeSettings = () => {
           <div className='flex gap-3'>
             {themeColors.map((item, index) => (
               <TooltipComponent key={index} content={item.name} position='TopCenter'>
-                <div className='relative mt-2 cursor-pointer flex gap-5 item-center'>
+                <div className='relative mt-2 cursor-pointer flex gap-5 items-center'>
                   <button
                     type='button'
                     className='h-10 w-10 rounded-full cursor-pointer'
                     style={{ backgroundColor: item.color }}
                     onClick={() => {}}
                   >
-                    <BsCheck className={`ml-2 text-2xl text-white ${false  ? 'block' : 'hidden'}`} />
+                    <BsCheck className={`ml-2 text-2xl text-white ${true  ? 'block' : 'hidden'}`} />
                   </button>
                 </div>
               </TooltipComponent>
