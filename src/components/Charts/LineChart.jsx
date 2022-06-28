@@ -5,7 +5,12 @@ import { lineCustomSeries, LinePrimaryYAxis, LinePrimaryXAxis } from '../../data
 
 const LineChart = () => {
   return (
-    <ChartComponent>
+    <ChartComponent
+      id='line-chart'
+      height='420px'
+      primaryXAxis={LinePrimaryXAxis}
+      primaryYAxis={LinePrimaryYAxis}
+    >
       <Inject services={[LineSeries,DateTime, Legend, Tooltip]}/>
       <SeriesCollectionDirective>
         {lineCustomSeries.map((item, index) => 
