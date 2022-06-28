@@ -3,12 +3,10 @@ import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, Dat
 
 import { lineCustomSeries, LinePrimaryYAxis, LinePrimaryXAxis } from '../../data/dummy';
 
-import { Header, LineChart } from '../../components';
-
 const LineChart = () => {
   return (
     <ChartComponent>
-      
+      <Inject />
     </ChartComponent>
   )
 }
