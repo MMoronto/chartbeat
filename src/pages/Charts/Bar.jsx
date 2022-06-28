@@ -1,7 +1,8 @@
 import React from 'react';
-import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, BarSeries, DateTime, Legend, Tooltip } from '@syncfusion/ej2-react-charts';
+import { ChartComponent, SeriesCollectionDirective, SeriesDirective, Inject, BarSeries, DataLabel, ColumnSeries, Category, Legend, Tooltip } from '@syncfusion/ej2-react-charts';
 
 import { barCustomSeries, barPrimaryYAxis, barPrimaryXAxis } from '../../data/dummy';
+import { ChartsHeader } from '../../components';
 import { useStateContext } from '../../contexts/ContextProvider';
 
 const Bar = () => {
@@ -17,7 +18,7 @@ const Bar = () => {
       tooltip={{ enable: true }}
       background={currentMode === 'Dark' ? '#33373E' : '#fff'}
     >
-      <Inject services={[BarSeries,DateTime, Legend, Tooltip]}/>
+      <Inject services={[BarSeries,DateTime, Legend, Category, Tooltip]}/>
       <SeriesCollectionDirective>
         {barCustomSeries.map((item, index) => 
         <SeriesDirective key={index} {...item} />)}
