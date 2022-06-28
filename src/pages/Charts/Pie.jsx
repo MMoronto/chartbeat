@@ -23,8 +23,27 @@ const Pie = () => {
         <AccumulationSeriesCollectionDirective>
           <AccumulationSeriesDirective 
           name='Project' 
-          dataSource={pieChartData} 
-          />
+          dataSource={pieChartData}
+          xName='x'
+          yName='y'
+          innerRadius='40%'
+          startAngle={0}
+          endAngle={360}
+          radius='70%'
+          explode={true}
+          explodeOffset='10%'
+          explodeIndex={3}
+          dataLabel={{
+            visible: true,
+            name: 'text',
+            position: 'Inside',
+            font: {
+              fontWeight: '600',
+              color: '#ffffff',
+            },
+          }}
+
+/>
         </AccumulationSeriesCollectionDirective>
       </AccumulationChartComponent>
       </div>
