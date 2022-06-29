@@ -1,5 +1,5 @@
 import React from 'react';
-import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Inject, AccumulationLegend, AccumulationTooltip, PyramidSeries, AccumulationSelection } from '@syncfusion/ej2-react-charts';
+import { AccumulationChartComponent, AccumulationSeriesCollectionDirective, AccumulationSeriesDirective, Inject, AccumulationLegend, AccumulationTooltip, PyramidSeries, AccumulationSelection, AccumulationDataLabel } from '@syncfusion/ej2-react-charts';
 import { Header } from '../../components';
 
 import { PyramidData } from '../../data/dummy';
@@ -13,19 +13,32 @@ const Pyramid = () => {
       <Header category='Pyramid' title='Road Comparison Chart' />
       <div className='w-full'>
         <AccumulationChartComponent
-          id='area-chart'
-          height='420px'
-          primaryXAxis={areaPrimaryXAxis}
-          primaryYAxis={areaPrimaryYAxis}
-          chartArea={{ border: { width: 0 }}}
+          id='pyramid-chart'
+          legendSettings={{ background: 'white' }}
           tooltip={{ enable: true }}
           background={currentMode === 'Dark' ? '#33373E' : '#fff'}
         >
-          <Inject services={[SplineAreaSeries,DateTime, Legend]}/>
-          <SeriesCollectionDirective>
-            {areaCustomSeries.map((item, index) => 
-            <SeriesDirective key={index} {...item} />)}
-          </SeriesCollectionDirective>
+          <Inject services={[AccumulationDataLabel, AccumulationTooltip, PyramidSeries, AccumulationLegend, AccumulationSelection]} />
+          <AccumulationSeriesCollectionDirective>
+            <AccumulationSeriesDirective 
+              name='Food'
+              dataSource={PyramidData}
+              xName='x'
+              yName='y'
+              type='Pyramid'
+              width='45%'
+              height='80%'
+              neckWidth='15%'
+              gapRatio={0.03}
+              explode
+              emptyPointSettings={{ mode: 'Drop', fill: 'red' }}
+              dataLabel={{
+                visible: true,
+                position: 'Inside',
+                name: 'text',
+              }} 
+            />
+          </AccumulationSeriesCollectionDirective>
         </AccumulationChartComponent>
       </div>
     </div>
