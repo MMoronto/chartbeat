@@ -42,7 +42,7 @@ const Pyramid = () => {
         </AccumulationChartComponent>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Pyramid
