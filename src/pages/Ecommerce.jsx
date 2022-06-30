@@ -2,6 +2,8 @@ import React from 'react';
 import { BsCurrencyDollar } from 'react-icons/bs';
 import { FiSettings } from 'react-icons/fi';
 import { GoPrimitiveDot } from 'react-icons/go';
+import { IoIosMore } from 'react-icons/io';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
 import { Stacked, Pie, Button, SparkLine } from '../components';
 
