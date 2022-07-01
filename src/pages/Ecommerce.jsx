@@ -15,7 +15,7 @@ const DropDown = ({ currentMode }) => (
   <div className='w-28 border-1 border-color px-2 py-1 rounded-md'>
     <DropDownListComponent id='time' fields={{ text: 'Time', value: 'id' }} style={{ border: 'none', color: (currentMode === 'Dark') && 'white' }} value='1' dataSource={DropDown} popupHeight='220px' popupwidth='120px' />
   </div>
-)
+);
 
 const Ecommerce = () => {
   const { currentColor, currentMode } = useStateContext();
@@ -28,6 +28,13 @@ const Ecommerce = () => {
               <p className='font-bold text-gray-400'>Earnings</p>
               <p className='text-2xl'>$77,777.78</p>
             </div>
+            <button
+              type='button'
+              style={{ backgroundColor: currentColor }}
+              className='text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full p-4'
+            >
+              <BsCurrencyDollar />
+            </button>
           </div>
           <div className='mt-6'>
             <Button 
@@ -35,7 +42,7 @@ const Ecommerce = () => {
               bgColor={currentColor}
               text='Download'
               borderRadius='10px'
-              size={'medium'}
+              // size={'medium'}
             />
           </div>
         </div>
